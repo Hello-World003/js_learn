@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .column-1-6{
+                width: 16.6666667%;
+            }
+            .column-2-6{
+                width: 33.3333333%
+            }
+            .column-3-6{
+                width: 50%;
+            }
+            .column-4-6{
+                width: 66.6666667%;
+            }
+            .column-5-6{
+                width: 83.3333333%;
+            }
+            .column-6-6{
+                width: 100%;
+            }
+        
+        /* @media screen and(max-width:780px)
+        {
+          
+        } */
+
+        @media screen and (max-width:480px)
+        {
+            .column-1-6{
+                width: 100%;
+            }
+            .column-2-6{
+                width: 100%
+            }
+            .column-3-6{
+                width: 100%;
+            }
+            .column-4-6{
+                width: 100%;
+            }
+            .column-5-6{
+                width: 100%;
+            }
+            .column-6-6{
+                width: 100%;
+            }
+            
+        }
+
+        .row:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        [class^=column]{
+            float: left;
+        }
+        .header{
+            background-color: green;
+            height: 200px;
+        }
+
+        .sidebar{
+            background-color: crimson;
+            height: 300px;
+        }
+
+        .content{
+            background-color: aqua;
+            height: 300px;
+        }
+      
+        .footer{
+            background-color: yellow;
+            height: 200px;
+        }
+        .wrap{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+       
+
+    </style> 
+</head>
+<body>
+    <div class="wrap">
+        <div class="row">
+            <div class="column-6-6 header  ">Header</div>
+        </div>
+        <div class="row">
+            <div class="column-4-6 content">Content</div>
+            <div class="column-2-6 sidebar ">Sidebar</div>
+        </div>
+        <div class="row">
+            <div class="column-6-6 footer">Footer</div>
+        </div>
+    </div>
+</body>
+</html>

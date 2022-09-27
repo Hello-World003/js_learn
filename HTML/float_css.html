@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template with Cafedev</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Layout Float With Cafedev</h2>
+<p>Trong ví dụ này, chúng tôi đã tạo một tiêu đề, hai cột / hộp và chân trang. Trên các màn hình nhỏ hơn, các cột sẽ xếp chồng lên nhau.</p>
+<p>Thay đổi kích thước cửa sổ trình duyệt để xem hiệu ứng phản hồi (bạn sẽ tìm hiểu thêm về điều này trong chương tiếp theo của chúng tôi - HTML Responsive.)</p>
+
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Hồ Chí Minh</a></li>
+      <li><a href="#">Hà Nội</a></li>
+      <li><a href="#">Đà Nẵng</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Hồ Chí Minh</h1>
+    <p>Hồ Chí Minh Nằm trong vùng chuyển tiếp giữa Đông Nam Bộ và Tây Nam Bộ, Thành phố Hồ Chí Minh(SG) ngày nay có 19 quận và 5 huyện, tổng diện tích 2.095,239 km².</p>
+    <p>Vùng đất này ban đầu được gọi là Prey Nokor theo tiếng Khmer của người dân bản địa. Tên gọi này có nghĩa là "thành trong rừng". Vì sự sụp đổ của đế chế Khmer, vùng Nam Bộ trở thành đất vô chủ, về sau đã sáp nhập vào Đại Việt nhờ công cuộc khai phá miền Nam của chúa Nguyễn. Năm 1698, Nguyễn Hữu Cảnh cho lập phủ Gia Định</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Grid-View */
+        .column-1-12{
+        width: 8.3333333%;
+       }
+       .column-2-12{
+        width: 16.6666667%;
+       }
+       .column-3-12{
+        width: 25%;
+       }
+       .column-3-12-search{
+        width: 25%;
+       }
+       .column-4-12{
+        width: 33.3333333%;
+       }
+       .column-5-12{
+        width: 41.6666667%;
+       }
+       .column-6-12{
+        width: 50%;
+       }
+       .column-7-12{
+        width: 58.3333333%;
+       }
+       .column-8-12{
+        width: 66.6666667%;
+       }
+       .column-9-12{
+        width: 75%;
+       }
+       .column-10-12{
+        width: 83.3333333%;
+       }
+       .column-11-12{
+        width: 91.6666667%;
+       }
+       .column-12-12{
+        width: 100%;
+       }
+
+       [class^=column]{
+        float: left;
+       }
+
+       .row::after{
+        content: "";
+        clear: both;
+        display: block;
+       }
+
+
+
+       /* Mobile */
+       @media screen and (max-width:768px) {
+                    .column-1-12{
+                    width: 8.3333333%;
+                }
+                .column-2-12{
+                    width:100%;
+                }
+                .column-3-12{
+                    width: 50%;
+                }
+                .column-3-12-search{
+                    width: 100%;
+                }
+                .column-4-12{
+                    width: 33.3333333%;
+                }
+                .column-5-12{
+                    width: 41.6666667%;
+                }
+                .column-6-12{
+                    width: 50%;
+                }
+                .column-7-12{
+                    width: 58.3333333%;
+                }
+                .column-8-12{
+                    width: 66.6666667%;
+                }
+                .column-9-12{
+                    width: 100%;
+                }
+                .column-10-12{
+                    width: 83.3333333%;
+                }
+                .column-11-12{
+                    width: 91.6666667%;
+                }
+                .column-12-12{
+                    width: 100%;
+                }
+
+
+                .sidebar{
+                    padding: 5px;
+                    height: auto;
+                }
+                
+        
+       }
+
+       
+
+       .header{
+        background-color: rgb(238, 66, 18);
+        height: 70px;
+        color: white;
+        padding: 15px 0 15px 5px;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+
+       .menu{
+         background-color:  green;
+         font-family: Arial, Helvetica, sans-serif;
+       }
+
+       ul.menungang{
+           list-style: none;
+           text-align: center;
+           display: block;
+           
+       }
+
+      ul.menungang>li{
+            display:inline-block;
+            height: 23px;
+            font-size: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px 10px 5px 10px;
+            position: relative;
+       }
+
+
+       ul.submenu{
+          position: absolute;
+          list-style: none;
+          width: 100%;
+          display: none;
+          background-color: aliceblue;
+       }
+       ul.submenu>li{
+         height: 23px;
+         width: 100%;
+         margin-top: 10px;
+         padding: 5px 10px 5px 10px;
+       }
+
+
+      ul.menungang a{
+            text-decoration: none;
+            color: white;
+       }
+       ul.menungang li:hover{
+            background-color: aqua;
+
+       }
+
+       ul.menungang li:hover > .submenu{
+            display: block;
+       }
+
+       ul.menungang li a:hover{
+           color: black;
+       }
+
+    
+
+      
+       .sidebar{
+        padding: 5px;
+        height: auto;
+       }
+        .txtInput:hover{
+            background-color: green;
+        }
+
+
+       .content{
+        height: auto;
+        padding: 5px 10px 5px 5px;
+        float: left;
+       }
+
+    
+       .content.book{
+           width: 100%;
+           height: 300px;
+           margin-left: 15px;
+       }
+
+       .book{
+            border: 3px solid black;
+            padding: 10px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+       }
+
+        .name{
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: bold;
+       }
+
+       img{
+            margin-top: 10px;
+            width: 100%;
+            height: 100%;}
+
+
+
+       .footer{
+        background-color: rgb(253, 137, 5);
+        height: 30px;
+        padding: 10px 0;
+        text-align: center;
+       }
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column-12-12 header">
+            <h1>BOOKS ONLINE</h1>
+        </div>
+        <div class="column-12-12 menu">
+            <ul class="menungang">
+                <li style="float: right;" class="column-2-12"><a href="">TRUYỆN THIẾU NHI</a></li>
+                <li style="float: right;" class="column-2-12"><a href="">TẠP CHÍ CHUYÊN NGÀNH</a></li>
+                <li style="float: right;" class="column-2-12"><a href="">SÁCH THAM KHẢO</a></li>
+                <li style="float: right;" class="column-2-12">
+                    <a href=""> SÁCH GIÁO KHOA</a>
+                     <ul class="submenu">
+                         <li>Lớp 6</li>
+                         <li>Lớp 7</li>
+                         <li>Lớp 8</li>
+                     </ul>
+                 </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-3-12-search sidebar">
+            <form action="get">
+                Tìm kiếm:<br>
+                <input class="txtInput" type="text" name="txtname" id="name">
+                <input type="submit" name="btnTimKiem" id="btnTimKiem" value="Tìm">
+            </form>
+        </div>
+        <div class="column-9-12 content">
+            <div class="column-3-12">
+                <div class="book">
+                    <p class="name">Tiếng việt</p>
+                     <img src="R.png" alt="Tiếng việt">
+                 </div>    
+            </div>
+            <div class="column-3-12">
+                <div class="book">
+                    <p class="name">Tiếng việt</p>
+                     <img src="R.png" alt="Tiếng việt">
+                 </div>    
+            </div>
+            <div class="column-3-12">
+                <div class="book">
+                    <p class="name">Tiếng việt</p>
+                     <img src="R.png" alt="Tiếng việt">
+                 </div>    
+            </div>
+            <div class="column-3-12">
+                <div class="book">
+                    <p class="name">Tiếng việt</p>
+                     <img src="R.png" alt="Tiếng việt">
+                 </div>    
+            </div>
+            <div class="column-3-12">
+                <div class="book">
+                    <p class="name">Tiếng việt</p>
+                     <img src="R.png" alt="Tiếng việt">
+                 </div>    
+            </div>
+            <div class="column-3-12">
+                <div class="book">
+                    <p class="name">Tiếng việt</p>
+                     <img src="R.png" alt="Tiếng việt">
+                 </div>    
+            </div>
+            <div class="column-3-12">
+                <div class="book">
+                    <p class="name">Tiếng việt</p>
+                     <img src="R.png" alt="Tiếng việt">
+                 </div>    
+            </div>
+            <div class="column-3-12">
+                <div class="book">
+                    <p class="name">Tiếng việt</p>
+                     <img src="R.png" alt="Tiếng việt">
+                 </div>    
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-12-12 footer">
+            <h5>Design by Duc</h5>
+        </div>
+    </div>
+</body>
+</html>
